@@ -16,7 +16,7 @@ export function SideBar(props: SideBarProps) {
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
   useEffect(() => {
-    api.get<GenreResponseProps[]>('genres').then(response => {
+    api.get<GenreResponseProps[]>("genres").then(response => {
       setGenres(response.data);
     });
   }, []);
